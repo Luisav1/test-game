@@ -7,6 +7,7 @@
 import ScreenView from '../../../../joist/js/ScreenView.js';
 import ResetAllButton from '../../../../scenery-phet/js/buttons/ResetAllButton.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
+import GameAudioPlayer from '../../../../../vegas/js/GameAudioPlayer.js';
 import TestGameConstants from '../../common/TestGameConstants.js';
 import testGame from '../../testGame.js';
 import TestGameModel from '../model/TestGameModel.js';
@@ -24,6 +25,8 @@ class TestGameScreenView extends ScreenView {
     super( {
       tandem: tandem
     } );
+
+    const gameAudioPlayer = new GameAudioPlayer();
 
     const resetAllButton = new ResetAllButton( {
       listener: () => {
