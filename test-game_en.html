@@ -35,11 +35,14 @@
         "requirejsNamespace": "TEST_GAME",
         "simulation": true,
         "runnable": true,
-        "readmeCreatedManually": true,
         "supportedBrands": [
           "phet",
           "adapted-from-phet"
-        ]
+        ],
+        "phetLibs": [
+          "vegas"
+        ],
+        "supportsOutputJS": true
       },
       "eslintConfig": {
         "extends": "../chipper/eslint/sim_eslintrc.js"
@@ -56,10 +59,6 @@
         "requirejsNamespace": "SCENERY_PHET"
       },
       {
-        "repo": "test-game",
-        "requirejsNamespace": "TEST_GAME"
-      },
-      {
         "repo": "sun",
         "requirejsNamespace": "SUN"
       },
@@ -68,8 +67,16 @@
         "requirejsNamespace": "TAMBO"
       },
       {
+        "repo": "test-game",
+        "requirejsNamespace": "TEST_GAME"
+      },
+      {
         "repo": "twixt",
         "requirejsNamespace": "TWIXT"
+      },
+      {
+        "repo": "vegas",
+        "requirejsNamespace": "VEGAS"
       }
     ];
 
