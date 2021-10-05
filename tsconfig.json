@@ -3,6 +3,9 @@
   "references": [
     {
       "path": "../joist"
+    },
+    {
+      "path": "../vegas"
     }
   ],
   "include": [

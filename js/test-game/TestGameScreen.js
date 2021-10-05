@@ -12,20 +12,16 @@ import TestGameScreenView from './view/TestGameScreenView.js';
 
 class TestGameScreen extends Screen {
 
-  /**
-   * @param {Tandem} tandem
-   */
-  constructor( tandem ) {
+  constructor( ) {
 
     const options = {
       //TODO if you include homeScreenIcon or navigationBarIcon, use JOIST/ScreenIcon
-      backgroundColorProperty: testGameColors.screenBackgroundColorProperty,
-      tandem: tandem
+      backgroundColorProperty: testGameColors.screenBackgroundColorProperty
     };
 
     super(
-      () => new TestGameModel( tandem.createTandem( 'model' ) ),
-      model => new TestGameScreenView( model, tandem.createTandem( 'view' ) ),
+      () => new TestGameModel(),
+      model => new TestGameScreenView( model ),
       options
     );
   }

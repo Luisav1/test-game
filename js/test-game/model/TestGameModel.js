@@ -4,17 +4,35 @@
  * @author Luisa Vargas
  */
 
-import Tandem from '../../../../tandem/js/Tandem.js';
+import Property from '../../../../axon/js/Property.js';
 import testGame from '../../testGame.js';
+import TestGameLevel from './TestGameLevel.js';
 
 class TestGameModel {
 
-  /**
-   * @param {Tandem} tandem
-   */
-  constructor( tandem ) {
-    assert && assert( tandem instanceof Tandem, 'invalid tandem' );
-    //TODO
+  constructor() {
+
+    // @public {TestGameLevel[]}
+    this.levels = [
+
+      // Level 1
+      new TestGameLevel( 1 ),
+
+      // Level 2
+      new TestGameLevel( 2 ),
+
+      // Level 3
+      new TestGameLevel( 3 ),
+
+      // Level 3
+      new TestGameLevel( 4 )
+    ];
+
+    // @public {Property.<null|TestGameLevel>} the selected game level
+    // null means 'no selection' and causes the view to return to the level-selection UI
+    this.levelProperty = new Property( null, {
+      validValues: [ null, ...this.levels ]
+    } );
   }
 
   /**
@@ -23,6 +41,8 @@ class TestGameModel {
    */
   reset() {
     //TODO
+    this.levels.forEach( level => level.reset() );
+    this.levelProperty.reset();
   }
 
   /**

@@ -1,5 +1,17 @@
 {
   "test-game.title": {
     "value": "Test Game"
+  },
+  "1.level": {
+    "value": "Level 1"
+  },
+  "2.level": {
+    "value": "Level 2"
+  },
+  "3.level": {
+    "value": "Level 3"
+  },
+  "4.level": {
+    "value": "Level 4"
   }
 }
