@@ -30,7 +30,10 @@ class TestGameScreenView extends ScreenView {
     const levelSelectionButtons = model.levels.map(
       level => new LevelSelectionButton( new Text( testGameStrings[ level.levelNumber ].level ), level.scoreProperty, {
         // LevelSelectionButton options
-        scoreDisplayConstructor: ScoreDisplayNumberAndStar
+        scoreDisplayConstructor: ScoreDisplayNumberAndStar,
+        listener: () => {
+          model.levelProperty.value = level;
+        }
       } )
     );
 
