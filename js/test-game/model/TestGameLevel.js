@@ -1,4 +1,10 @@
 // Copyright 2021, University of Colorado Boulder
+
+/**
+ * TestGameLevel is the model for a game level.
+ *
+ */
+
 import NumberProperty from '../../../../axon/js/NumberProperty.js';
 import AssertUtils from '../../../../phetcommon/js/AssertUtils.js';
 import testGame from '../../testGame.js';
